@@ -3,11 +3,7 @@ SampleApp::Application.routes.draw do
 
   get "pages/contact"
 
-  get "index/home"
-
-  get "index/about"
-
-  get "index/contact"
+  get "pages/about"
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
