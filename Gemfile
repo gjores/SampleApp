@@ -10,9 +10,14 @@ group :development, :test do
 end
 group :production do
   gem 'pg'
+  
 end
-
-
+group :development do
+  gem "rspec-rails", "~> 2.0"
+end
+group :test do
+	gem "rspec", "~> 2.0"
+end
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
