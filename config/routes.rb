@@ -1,4 +1,10 @@
 SampleApp::Application.routes.draw do
+  get "index/home"
+
+  get "index/about"
+
+  get "index/contact"
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
