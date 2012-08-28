@@ -1,0 +1,37 @@
+body{
+	background: #cfcfcf;
+}
+
+.container{
+	width: 710px;
+
+}
+.round{
+	margin: 10px auto auto auto;
+	padding: 20px;
+	background: #fff;
+	border-radius: 10px;
+
+}
+footer{
+	width:710px
+
+}
+.nav li{
+	display: inline-block;
+
+	
+}
+
+.nav_top{
+	float: right;
+	
+}
+.signup_button{
+	background: #cdcdcd;
+	padding: 20px;
+	font-size: 20px;
+	margin: auto;
+	border-radius: 10px;
+
+}

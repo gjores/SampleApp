@@ -3,6 +3,11 @@ require 'spec_helper'
 describe PagesController do
   render_views
 
+  before(:each) do
+        @base_title = "Sample app title"
+
+  end
+
   describe "GET 'home'" do
     it "returns http success" do
       get 'home'

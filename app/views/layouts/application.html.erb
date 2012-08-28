@@ -2,14 +2,18 @@
 <html>
 <head>
   <title><%= title %></title>
-  <%= stylesheet_link_tag    "screen", :media => "screen" %>
-  <%= stylesheet_link_tag    "print", :media => "print" %>
-  <%= javascript_include_tag "application" %>
+  <%= render "layouts/stylesheets"%>	
   <%= csrf_meta_tags %>
+  <!--[if IE]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+  <!--[if lt IE 8]><%= stylesheet_link_tag 'blueprint/ie'%><![endif]-->
 </head>
 <body>
+<div class="container">
+	<%= render 'layouts/header'%>
 
-<%= yield %>
-
+	<section class="round">
+		<%= yield %>
+	</section>
+	<%= render 'layouts/footer'%>
 </body>
 </html>

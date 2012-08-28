@@ -8,5 +8,12 @@ module ApplicationHelper
 		else
 			"#{base_title} | #{@title}"
 		end
+
+		
+	end
+
+	def logo
+		image_tag("idea-logo.jpg", :class => "logo", :width => "200", :alt => "logo")
+		
 	end
 end
