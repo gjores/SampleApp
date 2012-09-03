@@ -40,3 +40,8 @@ footer{
 	border-radius: 5px;
 	box-shadow: 0px 0px 5px #000 ;
 }
+
+table.profile{
+	width:100%
+	padding:1em;
+}
