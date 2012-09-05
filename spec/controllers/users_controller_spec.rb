@@ -3,11 +3,14 @@ require 'spec_helper'
 describe UsersController do
 render_views	
 
-  before(:each) do
-    @user = Factory(:user)
-  end
+ 
   
   describe "GET 'show'" do
+
+     before(:each) do
+      @user = Factory(:user)
+    end
+    
     it "returns http success" do
       get :show, :id => @user
       response.should be_success
@@ -33,6 +36,24 @@ render_views
       response.should have_selector('h1>img', :class => "gravatar")
     end
 
+  end
+
+  describe "success" do
+    
+    before(:each) do
+      @attr = {:name => "New User", :email => "new@user.com", :password => "foobar", :password_confirmation => "foobar"}
+    end
+    
+    it "should create a user" do
+      lambda do
+        post :create, :user => @attr
+      end.should change(User, :count).by(1)
+    end
+
+    it "should redirect to user show page" do
+      post :create, :user => @attr
+      response.should redirect_to(user_path(assigns(:user))) 
+    end
   end
 
   describe "GET 'new'" do

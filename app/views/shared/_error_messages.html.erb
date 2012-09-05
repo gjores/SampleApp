@@ -1,0 +1,15 @@
+<% if @user.errors.any? %>
+	<div id="error_explenation">
+		<h2>
+			<%= pluralize(@user.errors.count, "Error")%>
+			Prohibited this user from being saved.
+
+			<p>there was a problem with the following fields</p>
+			<ul>
+				<%= @user.errors.full_messages.each do |message| %>
+				<li><%= message %></li>
+				<% end %>
+			</ul>
+		</h2>
+	</div>	
+<% end %>
