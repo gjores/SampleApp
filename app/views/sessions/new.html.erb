@@ -1,0 +1,15 @@
+<h1>Sign in</h1>
+<%= form_for(:session, :url => sessions_path) do |f| %>
+	<div class ="field">
+		<%= f.label :email %>
+		<%= f.text_field :email %>
+	</div>
+
+	<div class ="field">
+		<%= f.label :password %>
+		<%= f.password_field :password %>
+	</div>
+		<%=  f.submit "Submit", :disable_with => 'Submiting...' %>
+<% end %>
+
+<p><%= link_to "sign up now", signup_path %> </p>
