@@ -122,8 +122,7 @@ render_views
         @attr = {  :name => "Shithead", :email => "shit@head.com", 
                    :password => 'foobar123', :password_confirmation => "foobar123"  }
       end
-    end
-        it "should change the user attr" do
+            it "should change the user attr" do
           put :update, :id => @user, :user => @attr
           user = assigns(:user)
           @user.reload
@@ -138,7 +137,21 @@ render_views
           flash[:success => "Profile updated."]
           
         end
-    
+    end
+  end
+
+  describe "authenication for edit and update user" do
+    before(:each) do
+      @user = Factory(:user)
+    end
+    it "should denie access to user edit" do
+      get :edit, :id => @user
+      response.should redirect_to(signin_path)
+    end
+    it "should denie access to update" do
+      put :update, :id => @user, :user => {}
+      response.should redirect_to(signin_path)
+    end
   end
 
 end
