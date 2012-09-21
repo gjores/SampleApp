@@ -60,3 +60,30 @@ border: 1px solid red;
 	padding: 0;
 
 }
+
+ul.users{
+	margin-top: 1em;
+}
+
+ul.users li{
+	list-style: none;
+}
+
+/*pagination*/
+
+.pagination a{
+padding: 0.5em;
+border: 1px #ccc solid; 
+}
+
+.pagination .current{
+padding: 0.5em;
+border: 1px #ccc solid; 
+background:#eee;	
+}
+
+/*sidebar*/
+
+.sidebar{
+	background:#ccc;
+}

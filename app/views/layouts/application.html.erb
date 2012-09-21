@@ -6,6 +6,7 @@
   <%= csrf_meta_tags %>
   <!--[if IE]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
   <!--[if lt IE 8]><%= stylesheet_link_tag 'blueprint/ie'%><![endif]-->
+<%= javascript_include_tag :default %>
 </head>
 <body>
 <div class="container">
@@ -20,5 +21,6 @@
 	<%= render 'layouts/footer'%>
 
 	<%= debug(params) if Rails.env%>
+</div>
 </body>
 </html>
