@@ -46,7 +46,7 @@ table.profile{
 	padding:1em;
 }
 
-.field_with_errors input{
+.field_with_errors input, .field_with_errors textarea{
 box-shadow: 0px 0px 5px red ;	
 border: 1px solid red;
 }
@@ -86,4 +86,10 @@ background:#eee;
 
 .sidebar{
 	background:#ccc;
+	height: 100px;
+}
+
+/*error*/
+.error{
+	font-size: 8px;
 }

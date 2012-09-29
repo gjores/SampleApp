@@ -1,3 +1,21 @@
+<% if signed_in? %>
+	<div>
+		<table class="front" summary="Create micropost">
+			<tr>
+				<td class="main">
+					<h1>Whats new</h1>
+					<%= render 'shared/micropost_form' %>
+				</td>
+				<td class="sidebar round">
+					<%=  render 'shared/user_info' %>
+				</td>
+			</tr>
+			
+		</table>
+	</div>
+<% else %>
+
 <h1>Pages#home</h1>
 
 <%= link_to 'Sign up', signup_path, :class => 'signup_button'%>
+<% end %>
