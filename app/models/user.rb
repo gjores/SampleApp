@@ -35,6 +35,10 @@ def has_password?(submitted_password)
 	
 end
 
+def feed
+	Micropost.where("user_id = ?", id)
+end
+
 class << self
 def authenticate(email, submitted_password)
 	user = find_by_email(email)
